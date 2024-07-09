@@ -10,13 +10,13 @@ Via composer, encaixe os itens abaixo no seu composer.json:
 ```json
 {
   "require": {
-      "d4sign/d4sign-php": "dev-master"
+      "devsconexa/d4sign-php": "dev-master"
   },
   "minimum-stability": "dev",
   "repositories": [
       {
           "type": "git",
-          "url": "https://github.com/d4sign/d4sign-php"
+          "url": "https://github.com/devsconexa/d4sign-php"
       }
   ]
 }
