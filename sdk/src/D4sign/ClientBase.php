@@ -144,8 +144,9 @@ abstract class ClientBase
 
         if($status !== $expectedHttpCode)
         {
+            $message = $content[0] ?? "Unexpected HTTP status [$status] for URL [$url]";
             //throw new D4signException("Expected status [$expectedHttpCode], actual status [$status], URL [$url]", D4signException::INVALID_HTTP_CODE);
-        	throw new D4signException($content[0], D4signException::INVALID_HTTP_CODE);
+        	throw new D4signException($message, D4signException::INVALID_HTTP_CODE);
         }
 
         $object = json_decode(implode("\n", $content));
